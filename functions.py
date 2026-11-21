@@ -5,7 +5,7 @@ def encode_packet(from_id, to_id, message):
         int(to_id),
         int(from_id),
         len(data)
-    ] + data)
+    ]) + data
     return packet
 
 def decode_packet(packet):
