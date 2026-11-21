@@ -7,5 +7,5 @@ class Client:
     def send(self, data, to: int):
         return fn.encode_packet(self.id, to, data)
 
-    def recive(self, from_id, data):
-        print(f"{self.id}: Recived from {from_id}: {data}")
+    def receive(self, from_id, data):
+        print(f"{self.id}: Received from {from_id}: {data}")
