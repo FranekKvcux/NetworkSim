@@ -6,5 +6,7 @@ class Server:
         self.id = id
         self.clients = clients
 
-    def read(self, data_bin: str):
-        pass
+    def read_and_send(self, packet):
+        to_id, from_id, data = fn.decode_packet(packet)
+        client = next((c for c in self.clients if c.id == to_id), None)
+        client.recive(from_id, data)
