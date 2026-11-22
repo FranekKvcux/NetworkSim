@@ -11,8 +11,8 @@ srvr = Server("Server1", 0, [clnt1, clnt2])
 
 clients = {1: clnt1, 2: clnt2}
 
-def send(to_id, from_id, data):
-    packet = clients[from_id].send(data, to_id)
+def send(to_ip, from_ip, data):
+    packet = clients[from_ip].send(data, to_ip)
     srvr.read_and_send(packet)
 
 

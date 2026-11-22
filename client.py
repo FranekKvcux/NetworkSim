@@ -1,6 +1,6 @@
 import functions as fn
 class Client:
-    def __init__(self, name: str, id: int):
+    def __init__(self, name: str, ip: int):
         self.name = name
         self.id = id
 
